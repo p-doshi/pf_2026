@@ -86,7 +86,7 @@ export default function App() {
             <div className="w-px h-8 bg-accent/10" />
             <div className="flex flex-col gap-1">
               <span className="text-[10px] font-mono text-focus/30 uppercase tracking-widest">Last Update</span>
-              <span className="text-xs font-mono text-focus/60">2026.02.28 // 08:51:46</span>
+              <span className="text-xs font-mono text-focus/60">2026.02.28 </span>
             </div>
           </div>
           
@@ -95,7 +95,7 @@ export default function App() {
               CMD + K to navigate
             </div>
             <div className="text-[10px] font-mono text-focus/20">
-              © 2026 RESEARCH_LAB_01
+              © 2026 PARTH_DOSHI
             </div>
           </div>
         </footer>

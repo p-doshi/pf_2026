@@ -86,31 +86,49 @@ const Experiment = ({ title, problem, approach, technicalDecisions, learnings, s
 
 export const ExperimentLog = () => {
   const experiments = [
-    {
-      title: "Exp_01: Distributed State Sync",
-      problem: "Maintaining causal consistency in a peer-to-peer network with high churn and unreliable links.",
-      approach: "Implemented a hybrid CRDT-based synchronization layer with adaptive gossip protocols.",
-      technicalDecisions: [
-        "Used Rust for low-level memory control and safety",
-        "Implemented Merkle Search Trees for efficient diffing",
-        "Custom UDP-based transport layer to bypass TCP overhead"
-      ],
-      learnings: "Initial gossip frequency was too high, causing network congestion. Switched to an exponentially decaying gossip rate based on local state stability. Learned that eventual consistency is often 'good enough' for 90% of research data.",
-      status: 'completed' as const
-    },
-    {
-      title: "Exp_02: Autonomous Navigation in Sparse Feature Environments",
-      problem: "Traditional SLAM algorithms fail in environments with few visual landmarks (e.g., long corridors).",
-      approach: "Developed a multi-modal sensor fusion approach combining IMU data with low-resolution sonar.",
-      technicalDecisions: [
-        "Extended Kalman Filter for state estimation",
-        "Particle filter for global localization",
-        "C++ for real-time processing constraints"
-      ],
-      learnings: "Sonar reflections in narrow spaces created significant noise. The EKF struggled with non-linear motion models. Currently investigating if a transformer-based sequence model can better predict trajectory from raw sensor streams.",
-      status: 'active' as const
-    }
-  ];
+  {
+    title: "Adaptive AIS MAC Policy via Reinforcement Learning",
+    problem: "Standard AIS Medium Access Control (MAC) protocols are static, leading to high collision rates in congested maritime zones and suboptimal slot utilization. Current policies do not adapt to real-time channel conditions or learn from historical congestion patterns.",
+    approach: "Formulated AIS transmission scheduling as a sequential decision process. Developed a reinforcement learning-based adaptive MAC policy using PPO to optimize transmission timing based on spatial context, vessel dynamics, local density, and historical success metrics while respecting regulatory and safety constraints.",
+    technicalDecisions: [
+      "State vector includes latitude/longitude, speed, heading, vessel class, local vessel density, time since last transmission, and historical success rates",
+      "Action space: transmit immediately or defer by 1–n slots within regulatory transmission window",
+      "Reward function: +1 for successful transmission, -0.1 per deferred slot, -5 for exceeding regulatory maximum interval",
+      "Simulated AIS environment incorporates collision probability, VHF propagation effects, realistic vessel movements, and heterogeneous vessel classes",
+      "Policy trained using Proximal Policy Optimization (PPO) for continuous state and constrained action spaces"
+    ],
+    learnings: "Adaptive MAC policies can significantly reduce collisions and improve successful transmission rates in high-density regions. Reinforcement learning enables context-aware scheduling that balances throughput, fairness, and regulatory compliance. Early results indicate policy can be executed efficiently on resource-constrained onboard hardware.",
+    status: 'active' as const
+  },  
+  {
+    title: "RAGosaurus: Lightweight Codebase RAG",
+    problem: "No practical RAG pipeline exists for analyzing codebases on low-memory GPUs; deploying large LLaMA models is prohibitively expensive.",
+    approach: "Built a lightweight, functional notebook-based RAG pipeline where users point it at a Python code folder and can query it directly. Combines token-aware chunking, embeddings, and retrieval.",
+    technicalDecisions: [
+      "Used CodeT5 for code-aware embeddings, optional SBERT for semantic matching",
+      "Mean-pooled embeddings with attention masks for stability",
+      "FAISS flat L2 index persisted to disk for fast retrieval",
+      "Generator: microsoft/phi-2 for natural-language answer generation",
+      "Chunking: 500-token max with 100-token stride to preserve function/class context",
+      "Batch embedding and caching to fit within 6GB GPU memory"
+    ],
+    learnings: "Efficient retrieval and generation is feasible on low-memory GPUs. Overlapping chunking significantly improved answer completeness for function-level queries. Found SBERT + FAISS to be surprisingly competitive with code-only embeddings in small-scale setups.",
+    status: 'completed' as const
+  },
+  {
+    title: "IRL-CSFT: Curiosity via Successor Feature Transitions",
+    problem: "Existing curiosity-driven IRL approaches (e.g., RND, SFM) struggle with temporal abstraction and policy consistency, especially under partial observability.",
+    approach: "Augmented successor-feature IRL with an intrinsic reward r = r_env + α · Var(ψ(s)) to encourage exploration aligned with long-term behavioral structure. Modified agents to incorporate this reward while training with SFM baselines.",
+    technicalDecisions: [
+      "sfm_td7.py — main logic for training with intrinsic rewards",
+      "sfm_td7_org.py — baseline SFM implementation for comparison",
+      "Evaluated on MuJoCo locomotion tasks (Walker Run, Cheetah Run)",
+      "Analyzed convergence speed, training variance, and imitation fidelity against expert trajectories"
+    ],
+    learnings: "CSFT reduced training variance and improved early convergence. Intrinsic reward based on successor feature variance encouraged exploration aligned with long-term behavior, outperforming standard curiosity-driven methods in partially observable environments.",
+    status: 'completed' as const
+  }
+];
 
   return (
     <section id="experiments" className="py-24 px-12 lg:px-24">

@@ -30,24 +30,41 @@ const LogEntry = ({ date, title, content, tags }: { date: string, title: string,
 );
 
 export const WorkLog = () => {
-  const entries = [
+ const entries = [
     {
-      date: "2024.02.15",
-      title: "Observations on Latent Space Drift",
-      content: "Noticed a significant drift in the attention weights of the second layer during training on the synthetic dataset. This seems to correlate with the model's inability to generalize to out-of-distribution samples. Hypothesizing that the layer is overfitting to local noise early in the training process.",
-      tags: ["ML", "TRANSFORMERS", "OBSERVATION"]
+      date: "2025.08",
+      title: "RAGosaurus: Lightweight Codebase RAG",
+      content:
+        "Developed a functional notebook RAG pipeline for Python codebases, enabling question-answering without high-memory LLaMA deployment. Combined CodeT5 embeddings, optional SBERT, FAISS retrieval, and microsoft/phi-2 generation, optimized for low VRAM GPUs.",
+      tags: ["RAG", "CODE", "ML", "EMBEDDINGS", "FAISS"]
     },
     {
-      date: "2024.01.28",
-      title: "Implementing a Custom Gossip Protocol",
-      content: "The standard gossip protocol was too aggressive for our low-bandwidth simulation environment. Switched to a pull-based mechanism where nodes request updates only when their local state hash differs from the network average. Reduced overhead by 40%.",
-      tags: ["DISTRIBUTED", "NETWORKING", "OPTIMIZATION"]
+      date: "2025.06",
+      title: "IRL-CSFT: Curiosity via Successor Feature Transitions",
+      content:
+        "Enhanced successor-feature IRL methods with intrinsic reward r = r_env + α · Var(ψ(s)), encouraging exploration aligned with long-term behavior. Evaluated on MuJoCo locomotion benchmarks, achieving reduced training variance and faster early convergence.",
+      tags: ["IRL", "RL", "SUCCESSOR_FEATURES", "CSFT"]
     },
     {
-      date: "2024.01.10",
-      title: "Formal Verification of State Machine",
-      content: "Using TLA+ to model the consensus state machine. Found a potential deadlock scenario when three nodes attempt to join the network simultaneously under high latency. Redesigning the join phase to include a randomized backoff strategy.",
-      tags: ["FORMAL_METHODS", "TLA+", "SYSTEM_DESIGN"]
+      date: "2025.06",
+      title: "AIS Trajectory Modeling & Physics-Informed LSTMs",
+      content:
+        "Designed large-scale AIS preprocessing pipelines (60GB+ data, 1,000+ vessels). Developed physics-informed trajectory models (LSTM, NPINN, T2Vec) improving positional RMSE and extending stable forecast horizons.",
+      tags: ["AIS", "LSTM", "NPINN", "TRAJECTORY", "PYTORCH"]
+    },
+    {
+      date: "2026.02",
+      title: "Multi-Modal Acoustic Ship Detection",
+      content:
+        "Building a framework integrating raw waveforms and LOFARgrams to detect ships. Investigating classical feature engineering vs CBAM-based CNNs, cross-medium generalization, and physics-informed pre-processing for improved detection accuracy.",
+      tags: ["ACOUSTICS", "MULTIMODAL", "CNN", "SHIP_DETECTION"]
+    },
+    {
+      date: "2026.03",
+      title: "Adaptive AIS MAC Policy with RL",
+      content:
+        "Formulated AIS transmission scheduling as a sequential decision process. Developed an adaptive MAC policy using PPO to optimize transmission timing based on spatial context, vessel dynamics, local density, and historical success metrics while respecting regulatory constraints.",
+      tags: ["AIS", "RL", "PPO", "COMMUNICATION", "MAC"]
     }
   ];
 

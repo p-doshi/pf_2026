@@ -34,27 +34,21 @@ const Area = ({ title, description, questions }: { title: string, description: s
 export const InvestigationAreas = () => {
   const areas = [
     {
-      title: "Latent Space Dynamics",
-      description: "Investigating how high-dimensional representations evolve during training in transformer-based architectures. Focus on identifying structural phase transitions in the attention maps.",
+      title: "Multimodal Acoustic Signal Analysis",
+      description: "Exploring the integration of raw waveforms and spectrogram-based representations (e.g., LOFARgrams) for robust ship detection and classification. Evaluating physics-informed approaches versus deep learning methods, and studying cross-medium generalization (air, water).",
       questions: [
-        "Can we predict model convergence by observing topological changes in latent space?",
-        "How do specific architectural constraints influence the geometry of the learned manifold?"
+        "Do multimodal representations outperform single-modality frameworks across different environments (air vs water)?",
+        "Is classical feature engineering still competitive, or do modern deep learning methods like CBAM-based CNNs capture more relevant patterns?",
+        "How can physical properties of acoustic propagation be incorporated into model architectures or pre-processing steps?"
       ]
     },
     {
-      title: "Decentralized Consensus in Noisy Environments",
-      description: "Exploring robust consensus algorithms for swarm robotics where communication links are intermittent and high-latency. Applying game-theoretic models to ensure stability.",
+      title: "Climate and Environmental Factors in the Gulf of St. Lawrence",
+      description: "Analyzing the impact of climate-related variables on maritime operations and AIS data reliability. Focus on unique winter conditions, ice coverage, and the limitations of reanalysis datasets like ERA5 for wind and sea state estimation.",
       questions: [
-        "What is the minimum information exchange required for global synchronization?",
-        "How do we handle Byzantine actors in a purely peer-to-peer research network?"
-      ]
-    },
-    {
-      title: "Hardware-Aware Neural Architecture Search",
-      description: "Developing automated methods to find optimal neural architectures that respect strict power and latency constraints of edge devices without sacrificing significant accuracy.",
-      questions: [
-        "Is there a fundamental limit to model compression before semantic loss occurs?",
-        "How can we integrate hardware telemetry directly into the loss function?"
+        "Which environmental factors most strongly affect vessel trajectories and navigational safety in GSL?",
+        "How do thin ice sheets (<1m) influence transmission, maneuvering, and collision risk, and how can models account for intermittent data?",
+        "What adjustments are needed when ERA5 or other reanalysis datasets underestimate or overestimate local wind speeds by up to 40%?"
       ]
     }
   ];

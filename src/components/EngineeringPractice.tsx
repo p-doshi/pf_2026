@@ -88,26 +88,99 @@ const ExperienceEntry = ({
 export const EngineeringPractice = () => {
   const experiences = [
     {
-      role: "Distributed Systems Intern",
-      org: "Core Infrastructure Group",
-      period: "Summer 2023",
-      type: "Research Internship",
-      domain: "Cloud Infrastructure",
-      systems: ["Go", "Kubernetes", "etcd", "gRPC"],
-      responsibilities: "Optimized the consensus layer of a proprietary distributed key-value store. Focused on reducing tail latency during leader election cycles in multi-region deployments.",
-      constraints: "Required zero-downtime migration paths and strict adherence to p99 latency SLAs under simulated network partitions.",
-      outcomes: "Reduced average leader election time by 22% and eliminated a class of race conditions in the membership change protocol."
+      role: "Machine Learning Research Assistant",
+      org: "MAPS Lab — Dalhousie University",
+      period: "Jan 2025 – Present",
+      type: "Research",
+      domain: "Trajectory Modeling / Multimodal Learning",
+      systems: ["PyTorch", "AIS Data", "LSTM", "NPINN", "T2Vec", "LLMs", "MARL", "Acoustic Signal Processing"],
+      responsibilities: "Designed and optimized large-scale AIS preprocessing pipelines handling 60GB+ maritime data across 1,000+ vessels. Developed and evaluated physics-informed trajectory models (LSTM, NPINN, T2Vec), fine-tuned large language models using parameter-efficient methods (LoRA) and GRPO-style optimization, applied LLM-based reward shaping to guide MARL policies, and currently developing a multi-modal acoustic signal classification framework for ship detection.",
+      constraints: "Irregular sampling, noisy geospatial signals, physically inconsistent motion patterns, and multi-modal integration challenges requiring constraint-aware and multimodal learning approaches.",
+      outcomes: "Increased usable trajectory data volume by 40%, reduced preprocessing time by 35%, improved positional RMSE and stability of forecastable trajectories, and enabled advanced AI-driven maritime analytics combining AIS, acoustic, and LLM-guided learning."
     },
     {
-      role: "Junior Software Engineer",
-      org: "Autonomous Robotics Lab",
-      period: "2022 - 2023",
-      type: "Part-time Engineering",
-      domain: "Robotics / Embedded",
-      systems: ["C++", "ROS2", "Linux Kernel", "RTOS"],
-      responsibilities: "Developed low-latency drivers for high-frequency LIDAR sensors. Integrated real-time telemetry pipelines into the core navigation stack.",
-      constraints: "Extremely limited memory overhead (under 64MB) and hard real-time constraints for safety-critical obstacle avoidance.",
-      outcomes: "Stabilized sensor data throughput at 100Hz with zero frame drops, enabling higher-speed autonomous navigation in dynamic environments."
+      role: "Research Engineer Intern",
+      org: "Dalhousie University",
+      period: "Sept 2025 – Dec 2025",
+      type: "Applied Research / Systems Engineering",
+      domain: "Computer Vision / Distributed Systems",
+      systems: ["YOLO11n", "DeepCut", "React", "TypeScript", "Node.js", "LLMs", "Cloudflare", "Vercel"],
+      responsibilities:
+        "Built end-to-end ML and infrastructure systems including a quantization-aware vision pipeline and a production serverless platform forecasting Arctic rescue response times across multiple operational zones.",
+      constraints:
+        "On-device inference limits, distributed deployment requirements, and reliability constraints for real-world operational decision systems.",
+      outcomes:
+        "Achieved 88% mAP on detection tasks and shipped a globally distributed LLM-integrated platform with automated CI/CD and edge routing.",
+    },
+    {
+      role: "Machine Learning Engineer",
+      org: "RBC Borealis — LSi",
+      period: "Oct 2025 – Dec 2025",
+      type: "Applied Machine Learning",
+      domain: "Environmental Modeling",
+      systems: ["Python", "Gradient Boosting", "Time-Series Modeling"],
+      responsibilities:
+        "Developed predictive models for eelgrass biomass dynamics using ecological growth constraints and seasonally-aware response modeling.",
+      constraints:
+        "Strong environmental variability and biological realism requirements preventing unconstrained statistical modeling.",
+      outcomes:
+        "Produced a 7-day forecasting model achieving MAE of 4.42 across validation datasets using rolling-window temporal inputs.",
+    },
+    {
+      role: "Data Science Intern",
+      org: "DeepSense",
+      period: "Jan 2025 – May 2025",
+      type: "Industry Research",
+      domain: "Oceanographic Data Systems",
+      systems: ["Python", "FastAPI", "PCA", "Geospatial Data"],
+      responsibilities:
+        "Standardized multi-terabyte environmental datasets combining satellite, AIS, and oceanographic sources while building automated preprocessing and validation infrastructure.",
+      constraints:
+        "Heterogeneous schemas, large-scale datasets, and cross-project deployment requirements.",
+      outcomes:
+        "Improved data integration efficiency by 45% and reduced model onboarding time from hours to minutes.",
+    },
+    {
+      role: "AI Engineer",
+      org: "Project MANTIS — Dalhousie Space Systems Society",
+      period: "Oct 2023 – Feb 2025",
+      type: "Applied Research / Edge AI",
+      domain: "Remote Sensing / Autonomous Systems",
+      systems: ["PyTorch", "ResNet", "DBSCAN", "C++", "NVIDIA Jetson Orin"],
+      responsibilities:
+        "Developed hybrid computer vision pipelines for harmful algal bloom detection using satellite imagery and deployed models on satellite edge hardware.",
+      constraints:
+        "Limited onboard compute, power-state variability, and real-time inference requirements in orbital environments.",
+      outcomes:
+        "Enabled sub-second onboard inference with fault-tolerant scheduling for nano-satellite deployment (launch planned 2026).",
+    },
+     {
+      role: "Machine Learning Engineer",
+      org: "Zeuron — Project GamBit",
+      period: "June 2024 – Feb 2025",
+      type: "Applied Research / Edge ML",
+      domain: "BCI / Signal Classification",
+      systems: ["Python", "PyTorch", "TFLite", "EEG", "Microcontrollers"],
+      responsibilities:
+        "Developed learning pipelines for classification of SSVEP EEG signals from the occipital lobe to enable thought-driven gameplay interaction. Designed continuous time-series processing workflows optimized for real-time inference.",
+      constraints:
+        "Non-stationary EEG signals, temporal drift across sessions, and strict compute limitations requiring deployment on low-powered edge microcontrollers.",
+      outcomes:
+        "Deployed an end-to-end inference pipeline on embedded hardware achieving stable F1-score performance under signal drift using adaptive temporal modeling approaches."
+    },
+    {
+      role: "Junior Game Developer",
+      org: "Zeuron — Project GamBit",
+      period: "May 2024 – Aug 2024",
+      type: "Game Development",
+      domain: "Interactive Systems / Human-Computer Interaction",
+      systems: ["Unity", "C#", "Arduino", "BLE", "UDP", "Computer Vision"],
+      responsibilities:
+        "Developed gameplay systems and accessibility features including configurable settings for volume, brightness, and colorblind-friendly modes. Built a custom networking API connecting a Unity environment to an Arduino-based BLE controller via UDP.",
+      constraints:
+        "Real-time synchronization between hardware controllers and gameplay systems while maintaining low interaction latency.",
+      outcomes:
+        "Integrated real-time eye-tracking models to dynamically adjust player camera movement based on gaze position, enabling adaptive interaction mechanisms."
     }
   ];
 
