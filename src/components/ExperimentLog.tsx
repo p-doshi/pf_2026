@@ -86,6 +86,20 @@ const Experiment = ({ title, problem, approach, technicalDecisions, learnings, s
 
 export const ExperimentLog = () => {
   const experiments = [
+    {
+    title: "KAEL - Kinetic Adaptive Epistemic Lattice - A persistent Identity Tranformer",
+    problem: "Current LLM approaches lack a way to learn continously, there is no single mechanism for the model to decide what to update and when to update? If the existing data or learning is true or if the new information an updated version?",
+    approach: "Still a Work in Progress, but what if we give LLMs an external memory, a trajectory that remembers what was learnt and when, what exact conversation lead to that belief and based on that update new info.",
+    technicalDecisions: [
+      "3 part Trajectory - Epistemic, dispositonal and relational",
+      "Loss includes consolidation and coherence",
+      "Soft prefix conditioning for the key and values in transformer for trajectory",
+      "A biased attention field for setting temperature based on sin similarity",
+      "A variance gate based gravitational pull, holding new belief until and unless learnt multiple times and then trigger external actions to update new trajectory if belief is significantly different"
+    ],
+    learnings: "Model does learn new things, trajectory is affective but testing framework will take longer time",
+    status: 'active' as const
+  },  
   {
     title: "Adaptive AIS MAC Policy via Reinforcement Learning",
     problem: "Standard AIS Medium Access Control (MAC) protocols are static, leading to high collision rates in congested maritime zones and suboptimal slot utilization. Current policies do not adapt to real-time channel conditions or learn from historical congestion patterns.",
