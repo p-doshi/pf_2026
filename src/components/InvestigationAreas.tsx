@@ -43,12 +43,12 @@ export const InvestigationAreas = () => {
       ]
     },
     {
-      title: "Climate and Environmental Factors in the Gulf of St. Lawrence",
-      description: "Analyzing the impact of climate-related variables on maritime operations and AIS data reliability. Focus on unique winter conditions, ice coverage, and the limitations of reanalysis datasets like ERA5 for wind and sea state estimation.",
+      title: "Physics Aware Diffusion for Kilometer Scale Data Recovery",
+      description: "Existing approaches lack physical accuracy while dounscaling low-resolution Sea Surface Data",
       questions: [
-        "Which environmental factors most strongly affect vessel trajectories and navigational safety in GSL?",
-        "How do thin ice sheets (<1m) influence transmission, maneuvering, and collision risk, and how can models account for intermittent data?",
-        "What adjustments are needed when ERA5 or other reanalysis datasets underestimate or overestimate local wind speeds by up to 40%?"
+        "Which environmental factors most strongly affect ocean variables?",
+        "Can we evolve diffusion for oceanography and produce high resolution data?",
+        "What adjustments are needed when ERA5 or other reanalysis datasets underestimate or overestimate local wind speeds, eddy fronts, persistence etc?"
       ]
     }
   ];
@@ -58,7 +58,7 @@ export const InvestigationAreas = () => {
       <div className="max-w-5xl">
         <div className="flex items-center gap-4 mb-16">
           <span className="text-xs font-mono text-focus/40 tracking-[0.3em] uppercase">
-            Current Investigation Areas
+            Current Research Areas
           </span>
           <div className="flex-1 h-px bg-accent/10" />
         </div>
