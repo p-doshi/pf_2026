@@ -98,7 +98,7 @@ export const ExperimentLog = () => {
       "Policy trained using Proximal Policy Optimization (PPO) for continuous state and constrained action spaces"
     ],
     learnings: "Adaptive MAC policies can significantly reduce collisions and improve successful transmission rates in high-density regions. Reinforcement learning enables context-aware scheduling that balances throughput, fairness, and regulatory compliance. Early results indicate policy can be executed efficiently on resource-constrained onboard hardware.",
-    status: 'active' as const
+    status: 'completed' as const
   },  
   {
     title: "RAGosaurus: Lightweight Codebase RAG",
