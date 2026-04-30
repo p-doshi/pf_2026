@@ -37,13 +37,13 @@ Now focused on multimodal and acoustic learning approaches for vessel identifica
                 </div>
                 <div>
                   <h4 className="text-[10px] font-mono text-focus/40 uppercase tracking-widest mb-2">University</h4>
-                  <p className="text-sm font-mono text-focus/70">  Incoming PhD <br/> MAPS Lab <br/> Faculty of Computer Science <br/> Dalhousie University</p>
+                  <p className="text-sm font-mono text-focus/70"> PhD Student<br/> MAPS Lab <br/> Faculty of Computer Science <br/> Dalhousie University</p>
                 </div>
                 <div>
                   <h4 className="text-[10px] font-mono text-focus/40 uppercase tracking-widest mb-2">Status</h4>
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <p className="text-sm font-mono text-focus/70">Active Investigation</p>
+                    <p className="text-sm font-mono text-focus/70">Active Researcher</p>
                   </div>
                 </div>
               </div>
