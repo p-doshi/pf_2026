@@ -189,7 +189,7 @@ export const EngineeringPractice = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-20">
           <span className="text-xs font-mono text-focus/40 tracking-[0.3em] uppercase">
-            Engineering Practice
+            Work Experience
           </span>
           <div className="flex-1 h-px bg-accent/20" />
         </div>
