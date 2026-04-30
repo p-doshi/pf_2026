@@ -30,7 +30,7 @@ export default function App() {
       { threshold: 0.3 }
     );
 
-    const sections = ['identity', 'practice', 'experiments', 'log', 'investigations', 'system'];
+    const sections = ['identity', 'practice', 'experiments', 'investigations', 'system'];
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
